@@ -1,0 +1,41 @@
+{
+	"title": "PageUp / PageDownでタブ移動",
+	"rules": [
+		{
+			"description": "PageUp を ⌘ + shift + [ に割り当てる",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "page_up"
+					},
+					"to": {
+            "key_code":"open_bracket",
+            "modifiers":[
+              "shift",
+              "command"
+            ]
+          }
+        }
+			]
+		},
+		{
+			"description": "PageDown を ⌘ + shift + ] に割り当てる",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "page_down"
+					},
+					"to": {
+            "key_code":"close_bracket",
+            "modifiers":[
+              "shift",
+              "command"
+            ]
+          }
+        }
+			]
+		}
+  ]
+}

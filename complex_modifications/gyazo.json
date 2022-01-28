@@ -1,0 +1,20 @@
+{
+	"title": "⌘+shift+GでGyazo起動",
+	"rules": [
+		{
+			"description": "⌘+shift+GでGyazo起動",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "g",
+						"modifiers":  { "mandatory": [ "command", "shift" ] }
+					},
+					"to_if_alone": [
+						{ "shell_command": "open -a 'Gyazo.app'" }
+					]
+				}
+			]
+		}
+  ]
+}

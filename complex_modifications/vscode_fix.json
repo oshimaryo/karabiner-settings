@@ -1,0 +1,47 @@
+{
+  "title":"VSCode Fix",
+  "rules":[
+    {
+      "description":"Fix Cmd+[",
+      "_comment":"https://github.com/microsoft/vscode/issues/115651",
+      "manipulators":[
+        {
+          "conditions":[
+            {
+              "type":"frontmost_application_if",
+                "bundle_identifiers":[
+                "^com\\.microsoft\\.VSCode"
+              ]
+            }
+          ],
+          "from":{
+            "key_code":"open_bracket",
+            "modifiers":{
+              "mandatory":[
+                "command"
+              ],
+              "optional":[
+                "any"
+              ]
+            }
+          },
+          "to":[
+            {
+              "key_code":"caps_lock"
+            },
+            {
+              "key_code":"open_bracket",
+              "modifiers":[
+                "command"
+              ]
+            },
+            {
+              "key_code":"caps_lock"
+            }
+          ],
+          "type":"basic"
+        }
+      ]
+    }
+  ]
+}
