@@ -1,0 +1,29 @@
+{
+  "title":"Illustratorで、WをF9に",
+  "rules":[
+    {
+      "description":"Illustrator W to F9",
+      "_comment":"Illustratorで「W」キーで「トリム表示」を行うための設定。前提として、Illustrator側の「キーボードショートカット」で、「トリム表示」に「F9」キーを割り当てておく必要がある。",
+      "manipulators":[
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type":"frontmost_application_if",
+                "bundle_identifiers":[
+                "^com\\.adobe\\.illustrator$"
+              ]
+            }
+          ],
+          "from": { "key_code":"w" },
+          "to_if_alone": [
+            {
+              "key_code":"f9",
+              "modifiers":["fn"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
